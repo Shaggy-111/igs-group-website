@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100% !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  overflow-x: hidden;
+}
+
+/* --- CUSTOM INFINITE SCROLL ANIMATION --- */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* 300px (card width) + 24px (gap-6) = 324px per card */
+    /* 324px * 8 (total unique cards) = 2592px */
+    transform: translateX(-2592px);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  /* Card width + gap multiplied by total items (unique + clone) */
+  width: calc(324px * 16); 
+  animation: scroll 35s linear infinite;
+}
+
+/* Hover par scroll rukne ke liye */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
