@@ -1,11 +1,17 @@
+// App.jsx
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Housekeeping from "./pages/Housekeeping";
-import Pantry from "./pages/Pantry";
-import Enquiry from "./pages/Enquiry";
-import About from "./pages/About";
 import FloatingButtons from "./components/FloatingButtons";
+
+// Pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Housekeeping from "./pages/Housekeeping";
+import Stationery from "./pages/Stationery";
+import ComputerAccessories from "./pages/ComputerAccessories";
+import Industries from "./pages/Industries";
+import Enquiry from "./pages/Enquiry";
 
 function App() {
   return (
@@ -13,24 +19,30 @@ function App() {
       <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-blue-100 selection:text-blue-900">
         {/* Navigation Bar */}
         <Navbar />
-        
-        {/* Sticky WhatsApp/Call Buttons */}
+
+        {/* Floating WhatsApp and Call Buttons */}
         <FloatingButtons />
-        
-        {/* Main Content Area */}
-        <main className="flex-grow pt-[72px]"> 
+
+        {/* Main Content */}
+        <main className="flex-grow pt-[72px]">
           <Routes>
+            {/* Main Pages */}
             <Route path="/" element={<Home />} />
-            <Route path="/housekeeping" element={<Housekeeping />} />
-            <Route path="/pantry" element={<Pantry />} />
-            <Route path="/enquiry" element={<Enquiry />} />
             <Route path="/about" element={<About />} />
+
+            {/* Product Pages */}
+            <Route path="/housekeeping" element={<Housekeeping />} />
+            <Route path="/stationery" element={<Stationery />} />
+            <Route
+              path="/computer-accessories"
+              element={<ComputerAccessories />}
+            />
+
+            {/* Other Pages */}
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/enquiry" element={<Enquiry />} />
           </Routes>
         </main>
-
-        {/* NOTE: Yahan se purana footer hta diya gaya hai. 
-          Ab sirf Home.jsx wala premium dark footer hi dikhega.
-        */}
       </div>
     </Router>
   );

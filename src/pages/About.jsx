@@ -17,6 +17,7 @@ import {
   Clock3,
   PackageCheck,
 } from "lucide-react";
+import SiteFooter from "../components/SiteFooter";
 
 const About = () => {
 
@@ -109,7 +110,7 @@ const About = () => {
             <div className="flex flex-wrap gap-5 mb-14">
 
               <Link
-                to="/contact"
+                to="/enquiry"
                 className="bg-blue-600 hover:bg-white hover:text-black transition-all text-white font-black uppercase tracking-widest text-xs px-10 py-5 rounded-2xl flex items-center gap-3 shadow-2xl shadow-blue-500/20"
               >
                 Contact Us
@@ -117,7 +118,7 @@ const About = () => {
               </Link>
 
               <Link
-                to="/products"
+                to="/housekeeping"
                 className="border border-white/10 hover:bg-white hover:text-black transition-all text-white font-black uppercase tracking-widest text-xs px-10 py-5 rounded-2xl"
               >
                 Explore Products
@@ -517,6 +518,7 @@ const About = () => {
         </div>
 
       </section>
+      <SiteFooter />
 
     </div>
   );
