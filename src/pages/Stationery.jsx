@@ -12,6 +12,15 @@ import {
   BookOpen,
 } from "lucide-react";
 import SiteFooter from "../components/SiteFooter";
+import a4CopierPaper from "../assets/office stationary/A4 Copier Paper.jfif";
+import ballPenPack from "../assets/office stationary/Ball Pen Pack.jfif";
+import executiveRegister from "../assets/office stationary/Executive Register.jfif";
+import highlighterSet from "../assets/office stationary/Highlighter Set.jfif";
+import leverArchFiles from "../assets/office stationary/Lever Arch Files.jfif";
+import staplerAndPins from "../assets/office stationary/Stapler & Pins.jfif";
+import stickyNotes from "../assets/office stationary/Sticky Notes.jfif";
+import tonerCartridge from "../assets/office stationary/Toner Cartridge.png";
+
 
 const categories = [
   "All Products",
@@ -33,54 +42,49 @@ const categoryIcons = {
   "Printer Supplies": Printer,
 };
 
+// Add these imports at the top of your Stationery.jsx file (below existing imports)
+
+// Replace your existing productsData array with this:
 const productsData = [
   {
     name: "Ball Pen Pack",
     category: "Writing Instruments",
-    image:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+    image: ballPenPack,
   },
   {
     name: "A4 Copier Paper",
     category: "Paper Products",
-    image:
-      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80",
+    image: a4CopierPaper,
   },
   {
     name: "Lever Arch Files",
     category: "Office Files",
-    image:
-      "https://images.unsplash.com/photo-1586282391129-76a6df230234?auto=format&fit=crop&w=800&q=80",
+    image: leverArchFiles,
   },
   {
     name: "Executive Register",
     category: "Registers & Notebooks",
-    image:
-      "https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80",
+    image: executiveRegister,
   },
   {
     name: "Stapler & Pins",
     category: "Desk Essentials",
-    image:
-      "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80",
+    image: staplerAndPins,
   },
   {
     name: "Toner Cartridge",
     category: "Printer Supplies",
-    image:
-      "https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=800&q=80",
+    image: tonerCartridge,
   },
   {
     name: "Highlighter Set",
     category: "Writing Instruments",
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
+    image: highlighterSet,
   },
   {
     name: "Sticky Notes",
     category: "Desk Essentials",
-    image:
-      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80",
+    image: stickyNotes,
   },
 ];
 
@@ -93,9 +97,6 @@ function ProductCard({ product }) {
           alt={product.name}
           className="w-full h-56 object-cover"
         />
-        <span className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
-          Wholesale
-        </span>
       </div>
 
       <div className="p-6">
@@ -149,7 +150,7 @@ function Stationery() {
                 to="/enquiry"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] transition-all w-fit"
               >
-                Get Bulk Pricing
+                Get Quote
                 <ArrowRight size={16} />
               </Link>
             </div>

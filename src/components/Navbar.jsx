@@ -28,6 +28,7 @@ function Navbar() {
     "/products",
   ].includes(location.pathname);
 
+  // Fixed navLinks array
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
@@ -52,9 +53,7 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 shadow-sm py-4"
-          : "bg-white py-6"
+        scrolled ? "bg-white/95 shadow-sm py-4" : "bg-white py-6"
       } border-b border-slate-100 px-6 lg:px-16 backdrop-blur-md`}
     >
       <div className="w-full flex justify-between items-center">
@@ -90,7 +89,7 @@ function Navbar() {
         {/* DESKTOP MENU */}
         <div className="hidden lg:flex items-center gap-10">
           <ul className="flex items-center gap-10 font-black text-[12px] uppercase tracking-widest text-slate-600">
-            {/* Standard Links */}
+            {/* Home + About */}
             {navLinks.slice(0, 2).map((link) => (
               <Link
                 key={link.path}
@@ -105,7 +104,7 @@ function Navbar() {
               </Link>
             ))}
 
-            {/* PRODUCTS DROPDOWN */}
+            {/* Products Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => setProductsOpen(true)}
@@ -127,7 +126,6 @@ function Navbar() {
                 />
               </button>
 
-              {/* Dropdown Menu */}
               <div
                 className={`absolute top-full left-0 mt-4 w-72 bg-white rounded-2xl shadow-2xl border border-slate-100 py-3 transition-all duration-200 ${
                   productsOpen
@@ -147,7 +145,7 @@ function Navbar() {
               </div>
             </div>
 
-            {/* Remaining Links */}
+            {/* Industries */}
             {navLinks.slice(2).map((link) => (
               <Link
                 key={link.path}
@@ -185,7 +183,6 @@ function Navbar() {
       {/* MOBILE MENU */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b border-slate-100 p-8 flex flex-col gap-4 lg:hidden shadow-2xl">
-          {/* Main Links */}
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
@@ -202,7 +199,6 @@ function Navbar() {
             About Us
           </Link>
 
-          {/* Products Section */}
           <div className="pt-2">
             <p className="font-black text-sm uppercase tracking-widest text-blue-600 mb-3">
               Products
@@ -230,9 +226,6 @@ function Navbar() {
             Industries
           </Link>
 
-    
-
-          {/* CTA */}
           <Link
             to="/enquiry"
             onClick={() => setIsOpen(false)}

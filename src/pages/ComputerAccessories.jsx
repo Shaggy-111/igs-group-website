@@ -12,6 +12,19 @@ import {
   ArrowRight,
 } from "lucide-react";
 import SiteFooter from "../components/SiteFooter";
+import dellMonitor from "../assets/computer accessories/Dell 24-inch LED Monitor.jfif";
+import wirelessKeyboardMouse from "../assets/computer accessories/Wireless Keyboard & Mouse Combo.jfif";
+import externalSSD from "../assets/computer accessories/External SSD 1TB.jfif";
+import wifiRouter from "../assets/computer accessories/Dual Band Wi-Fi Router.jfif";
+import laserPrinter from "../assets/computer accessories/Laser Printer.jfif";
+import noiseHeadset from "../assets/computer accessories/Noise Cancelling Headset.jfif";
+import mechanicalKeyboard from "../assets/computer accessories/Mechanical Keyboard.jfif";
+import wirelessMouse from "../assets/computer accessories/Wireless Optical Mouse.jfif";
+import portableHDD from "../assets/computer accessories/Portable HDD 2TB.jfif";
+import upsPowerBackup from "../assets/computer accessories/UPS Power Backup.jfif";
+import webcamFullHD from "../assets/computer accessories/Webcam Full HD.jfif";
+import usbDockingStation from "../assets/computer accessories/USB-C Docking Station.jfif";
+
 
 const categories = [
   "All Products",
@@ -27,74 +40,62 @@ const productsData = [
   {
     name: "Dell 24-inch LED Monitor",
     cat: "Monitors",
-    image:
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    image: dellMonitor,
   },
   {
     name: "Wireless Keyboard & Mouse Combo",
     cat: "Keyboards & Mice",
-    image:
-      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=800&q=80",
+    image: wirelessKeyboardMouse,
   },
   {
     name: "External SSD 1TB",
     cat: "Storage Devices",
-    image:
-      "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80",
+    image: externalSSD,
   },
   {
     name: "Dual Band Wi-Fi Router",
     cat: "Networking",
-    image:
-      "https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=800&q=80",
+    image: wifiRouter,
   },
   {
     name: "Laser Printer",
     cat: "Printers & Scanners",
-    image:
-      "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80",
+    image: laserPrinter,
   },
   {
     name: "Noise Cancelling Headset",
     cat: "Audio Accessories",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    image: noiseHeadset,
   },
   {
     name: "Mechanical Keyboard",
     cat: "Keyboards & Mice",
-    image:
-      "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80",
+    image: mechanicalKeyboard,
   },
   {
     name: "Wireless Optical Mouse",
     cat: "Keyboards & Mice",
-    image:
-      "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80",
+    image: wirelessMouse,
   },
   {
     name: "Portable HDD 2TB",
     cat: "Storage Devices",
-    image:
-      "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+    image: portableHDD,
   },
   {
     name: "UPS Power Backup",
     cat: "Networking",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    image: upsPowerBackup,
   },
   {
     name: "Webcam Full HD",
     cat: "Audio Accessories",
-    image:
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+    image: webcamFullHD,
   },
   {
     name: "USB-C Docking Station",
     cat: "Storage Devices",
-    image:
-      "https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=800&q=80",
+    image: usbDockingStation,
   },
 ];
 
@@ -111,16 +112,13 @@ const categoryIcons = {
 function ProductCard({ product }) {
   return (
     <div className="group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-      <div className="relative h-52 bg-slate-50 overflow-hidden">
-        <span className="absolute top-4 left-4 z-10 bg-blue-600 text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full">
-          Wholesale
-        </span>
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+          <div className="relative h-52 bg-slate-50 overflow-hidden">
+              <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+          </div>
 
       <div className="p-6">
         <p className="text-[10px] uppercase tracking-[0.2em] font-black text-blue-600 mb-3">
@@ -173,7 +171,7 @@ function ComputerAccessories() {
                                     to="/enquiry"
                                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] transition-all"
                                 >
-                                    Get Bulk Pricing
+                                    Get Quote
                                     <ArrowRight size={16} />
                                 </Link>
                             </div>

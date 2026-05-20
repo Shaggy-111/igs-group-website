@@ -19,7 +19,7 @@ const COMPANY_EMAIL = "info@igsgroup.in";
 
 const SiteFooter = () => {
   return (
-    <footer className="bg-black pt-24 pb-12 px-6 lg:px-20 text-white font-sans border-t border-white/5">
+    <footer className="bg-black pt-24 pb-12 px-6 lg:px-20 text-white font-sans border-t border-white/5 relative z-[200] pointer-events-auto">
       <div className="max-w-[1400px] mx-auto">
         {/* Upper Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-20">
@@ -39,7 +39,6 @@ const SiteFooter = () => {
 
             {/* Social / Contact Icons */}
             <div className="flex flex-wrap gap-2">
-              {/* Website */}
               <a
                 href="https://igsgroup.in"
                 target="_blank"
@@ -49,7 +48,6 @@ const SiteFooter = () => {
                 <Globe size={16} />
               </a>
 
-              {/* Email */}
               <a
                 href={`mailto:${COMPANY_EMAIL}`}
                 className="w-9 h-9 bg-white text-black rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
@@ -57,7 +55,6 @@ const SiteFooter = () => {
                 <Mail size={16} />
               </a>
 
-              {/* Phone */}
               <a
                 href={`tel:+91${COMPANY_PHONE}`}
                 className="w-9 h-9 bg-white text-black rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
@@ -65,7 +62,6 @@ const SiteFooter = () => {
                 <Phone size={16} />
               </a>
 
-              {/* WhatsApp */}
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -75,7 +71,6 @@ const SiteFooter = () => {
                 <Send size={16} />
               </a>
 
-              {/* Mobile */}
               <a
                 href={`tel:+91${COMPANY_PHONE}`}
                 className="w-9 h-9 bg-white text-black rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"
@@ -92,7 +87,7 @@ const SiteFooter = () => {
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-500"></span>
             </h5>
 
-            <ul className="space-y-4 text-slate-400 text-[12px] font-black uppercase tracking-tight">
+            <ul className="space-y-4">
               {[
                 "Air Fresheners",
                 "Taski Chemicals",
@@ -101,12 +96,17 @@ const SiteFooter = () => {
                 "Cleaning Aids",
                 "Equipment",
               ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 hover:text-blue-500 transition-colors"
-                >
-                  <ChevronRight size={12} className="text-blue-500" />
-                  {item}
+                <li key={item}>
+                  <Link
+                    to="/housekeeping"
+                    className="flex items-center gap-2 text-slate-400 text-[12px] font-black uppercase tracking-tight hover:text-blue-500 transition-colors cursor-pointer w-fit"
+                  >
+                    <ChevronRight
+                      size={12}
+                      className="text-blue-500 flex-shrink-0"
+                    />
+                    <span>{item}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -119,7 +119,7 @@ const SiteFooter = () => {
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-500"></span>
             </h5>
 
-            <ul className="space-y-4 text-slate-400 text-[12px] font-black uppercase tracking-tight">
+            <ul className="space-y-4">
               {[
                 "Registers/Pads",
                 "Pen/Markers",
@@ -128,12 +128,17 @@ const SiteFooter = () => {
                 "Whiteboards",
                 "Packaging",
               ].map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center gap-2 hover:text-blue-500 transition-colors"
-                >
-                  <ChevronRight size={12} className="text-blue-500" />
-                  {item}
+                <li key={item}>
+                  <a
+                    href="/stationery"
+                    className="inline-flex items-center gap-2 text-slate-400 text-[12px] font-black uppercase tracking-tight hover:text-blue-500 transition-colors cursor-pointer"
+                  >
+                    <ChevronRight
+                      size={12}
+                      className="text-blue-500 flex-shrink-0"
+                    />
+                    <span>{item}</span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -200,22 +205,8 @@ const SiteFooter = () => {
         </div>
 
         {/* Contact Strip */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 border-y border-white/5 mb-10">
-          {/* Address */}
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full border border-blue-500/30 flex items-center justify-center text-blue-500">
-              <MapPin size={20} />
-            </div>
-
-            <div>
-              <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">
-                Office Address
-              </p>
-              <p className="text-sm font-bold text-white">
-                Sector-62, Noida, Uttar Pradesh
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-y border-white/5 mb-10">
+          
 
           {/* Email */}
           <a

@@ -148,7 +148,7 @@ const Housekeeping = () => {
           </h1>
 
           <p className="text-slate-300 text-lg md:text-xl font-medium max-w-2xl mb-12 leading-relaxed border-l-4 border-blue-500 pl-6">
-            Noida & NCR&apos;s trusted wholesale supplier for commercial
+            Noida & NCR&apos;s trusted supplier for commercial
             cleaning chemicals, tissue products, dispensers & facility hygiene
             solutions.
           </p>
@@ -158,7 +158,7 @@ const Housekeeping = () => {
               to="/enquiry"
               className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-black transition-all flex items-center gap-2"
             >
-              Get Bulk Pricing
+              Get Quote
               <ArrowRight size={18} />
             </Link>
           </div>
@@ -180,7 +180,7 @@ const Housekeeping = () => {
               icon: <Truck />,
             },
             {
-              title: "Direct Wholesale Pricing",
+              title: "Competitive Pricing",
               icon: <Zap />,
             },
             {
@@ -323,9 +323,7 @@ const Housekeeping = () => {
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
 
-                    <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                      Wholesale
-                    </div>
+                
                   </div>
 
                   {/* CONTENT */}
@@ -381,7 +379,7 @@ const Housekeeping = () => {
                 <div className="bg-green-500 w-10 h-[3px]"></div>
 
                 <span className="text-blue-600 font-black uppercase tracking-widest text-[11px]">
-                  IGS Bulk Supplier Advantage
+                  IGS Supply Advantage
                 </span>
               </div>
 
@@ -391,7 +389,7 @@ const Housekeeping = () => {
 
               <p className="text-slate-600 text-lg leading-relaxed max-w-2xl">
                 Rapid deliveries, industrial grade products, safety certified
-                chemicals & best wholesale pricing for corporate and commercial
+                chemicals & best competitive pricing for corporate and commercial
                 spaces.
               </p>
             </div>

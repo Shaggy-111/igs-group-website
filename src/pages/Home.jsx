@@ -34,7 +34,7 @@ const slides = [
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80",
     title: "Your Trusted Housekeeping Partner",
     subtitle:
-      "Delivering clean and efficient workspaces with reliable bulk supply, competitive pricing, and professional customer support.",
+      "Delivering clean and efficient workspaces with reliable supply, competitive pricing, and professional customer support.",
     badge: "Complete Hygiene & Cleaning Solutions"
   }
 ];
@@ -184,7 +184,7 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           {[
             {
-              title: "Reliable Bulk Supply",
+              title: "Reliable Supply",
               icon: <Package className="text-blue-600" size={24} />
             },
             {
@@ -447,7 +447,7 @@ const Home = () => {
               </h2>
               <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-xl">
                 IGS delivers reliable housekeeping and facility solutions with quality-assured products,
-                competitive pricing, timely delivery, and dedicated customer support for bulk corporate requirements.
+  `               competitive pricing, timely delivery, and dedicated customer support for corporate requirements.
               </p>
             </div>
 
@@ -455,7 +455,7 @@ const Home = () => {
             <div className="space-y-8 pt-4">
               {[
                 {
-                  title: "Reliable Bulk Supply",
+                  title: "Reliable Supply",
                   desc: "Consistent and dependable supply for corporate and institutional requirements.",
                   icon: <Package className="text-blue-600" size={24} />,
                   bgColor: "bg-blue-50"
@@ -519,7 +519,7 @@ const Home = () => {
               {/* Bottom Contact Overlay */}
               <div className="absolute bottom-0 left-0 right-0 grid grid-cols-2">
                 <div className="bg-green-500 p-6 flex flex-col items-center justify-center text-white">
-                  <p className="text-[10px] font-bold opacity-80 uppercase">Call Now For Bulk Orders</p>
+                  <p className="text-[10px] font-bold opacity-80 uppercase">Call Now For Orders</p>
                   <p className="text-xl font-black">+91 6366920007</p>
                 </div>
                 <div className="bg-blue-600 p-6 flex items-center justify-center text-white">
