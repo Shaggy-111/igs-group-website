@@ -1,8 +1,9 @@
-// App.jsx
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import FloatingButtons from "./components/FloatingButtons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Pages
 import Home from "./pages/Home";
@@ -14,6 +15,14 @@ import Industries from "./pages/Industries";
 import Enquiry from "./pages/Enquiry";
 
 function App() {
+  // Safe location to initialize AOS animations
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-blue-100 selection:text-blue-900">

@@ -117,7 +117,7 @@ function Navbar() {
                     : "border-transparent hover:text-blue-600 hover:border-blue-600"
                 }`}
               >
-                Products
+                PRODUCTS
                 <ChevronDown
                   size={14}
                   className={`transition-transform ${
